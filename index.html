@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel - bootstrap</title>
+    <link rel="icon" type="png" src="https://cdn-icons-png.flaticon.com/512/2072/2072130.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+    
+    <main class="container-fluid position-relative main p-0 d-flex flex-column justify-content-between">
+
+       <header class="container header py-4 d-flex justify-content-between align-items-center">
+            <h2 class="text-uppercase m-0">travel</h2>
+            <div class="hamburger d-block">
+                <span class="top d-block bg-light"></span>
+                <span class="middle d-block bg-light"></span>
+                <span class="bottom d-block bg-light"></span>
+            </div>
+       </header>
+
+       <div class="container text text-uppercase">
+            <h2 class="m-0">never stop to</h2>
+            <h3>exploring the world</h3>
+            <p class="my-4">This is a travel website, by Traversy Media, recreated by me, Dhruv, a full-stack developer. I reduced the code by more than 70% and made it responsive without media queries. You can contact me by clicking the button below.</p>
+            <a class="text-dark text-a bg-light d-inline-block mt-2" href="https://www.instagram.com/dhr.the">contact</a>
+       </div>
+
+       <ul class="container socials d-flex align-items-center">
+            <li><a class="me-4" href="#"><img src="https://i.ibb.co/x7P24fL/facebook.png" alt=""></a></li>
+            <li><a class="me-4" href="#"><img src="https://i.ibb.co/Wnxq2Nq/twitter.png" alt=""></a></li>
+            <li><a href="#"><img src="https://i.ibb.co/ySwtH4B/instagram.png" alt=""></a></li>
+       </ul>
+
+       <video class="w-100 position-absolute h-100" muted loop autoplay playsinline>
+            <source src="https://videos.pexels.com/video-files/2169880/2169880-uhd_3840_2160_30fps.mp4" type="video/mp4">
+       </video>
+       <div class="overlay w-100 position-absolute h-100"></div>
+
+    </main>
+
+    <ul class="menu position-absolute m-0 p-0 h-100 d-flex flex-column justify-content-center ps-5">
+        <li class="my-1"><a class="text-dark text-uppercase" href="#">home</a></li>
+        <li class="my-1"><a class="text-dark text-uppercase" href="#">news</a></li>
+        <li class="my-1"><a class="text-dark text-uppercase" href="#">destination</a></li>
+        <li class="my-1"><a class="text-dark text-uppercase" href="#">blog</a></li>
+        <li class="my-1"><a class="text-dark text-uppercase" href="#">contact</a></li>
+    <ul>
+
+    <script>
+
+        const menuTgoggle = document.querySelector('.hamburger')
+        const main = document.querySelector('.main')
+
+        menuTgoggle.addEventListener('click', () => {
+            menuTgoggle.classList.toggle('active')
+            main.classList.toggle('active')
+        })
+    </script>    
+
+</body>
+</html>

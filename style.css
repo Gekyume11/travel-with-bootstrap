@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+a{
+    text-decoration: none !important;
+}
+main{
+    height: 100dvh;
+    background: #111;
+    color: #fff;
+    z-index: 10;
+    transition: .5s ease;
+    font-family: 'Poppins', sans-serif;
+}
+main.active{
+    transform: translateX(-220px);
+}
+main video{
+    object-fit: cover;
+    filter: opacity(0.8);
+    z-index: -2;
+    right: 0;
+    bottom: 0;
+}
+main .overlay{
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: #03a9f4;
+    mix-blend-mode: overlay;
+}
+header h2, .hamburger{
+    cursor: pointer;
+}
+.hamburger{
+    width: 30px;
+    height: 24px;
+    position: relative;
+    transition: 0.5s;
+}
+.hamburger .top, .middle, .bottom{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;    
+    height: 3px;
+    transition: 0.5s;
+}
+.hamburger .middle{
+    transform: translateY(10px);
+}
+.hamburger .bottom{
+    transform: translateY(20px);
+}
+.hamburger.active{
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+}
+.hamburger.active .top, .hamburger.active .bottom{
+    transform: rotate(45deg);
+    top: 0.656rem;
+}
+.hamburger.active .middle{
+    display: none !important;
+}
+.hamburger.active .bottom{
+    transform: rotate(-45deg);
+}
+.text h2{
+    font-size: clamp(1.875rem, 1.0938rem + 4.4643vw, 5rem);
+    font-weight: 800;
+}
+.text h3{
+    font-size: clamp(1.5625rem, 0.9531rem + 3.4821vw, 4rem);
+    font-weight: 700;
+}
+.text p{
+    font-size: clamp(1rem, 0.9688rem + 0.1786vw, 1.125rem);
+    max-width: 700px;
+    text-transform: none;
+    line-height: 160%;
+    font-weight: 400;
+}
+.text-a{
+    padding: 10px 30px;
+    letter-spacing: 3px;
+    font-weight: 600;
+    transition: .3s;
+}
+.text-a:hover{
+    letter-spacing: 6px;
+}
+.socials, .menu{
+    list-style: none;
+}
+.socials li a img{
+    filter: invert(1);
+    transform: scale(0.5);
+    transition: .3s ease;
+}
+.socials li a img:hover{
+    transform: scale(0.5) translateY(-15px);
+}
+.menu{
+    right: 0;
+    bottom: 0;
+    width: 220px;
+}
+.menu li a{
+    font-weight: 400;
+    font-size: 24px;
+    transition: .3s ease;
+}
+.menu li a:hover{
+    color: #03a9f4 !important;
+}
